@@ -1,0 +1,13 @@
+VirtualJoystickPlus
+ProgressBar
+Label
+VBoxContainer
+MarginContainer
+CanvasLayer
+CollisionShape3D
+StaticBody3D
+CharacterBody3D
+AnimationPlayer
+WorldEnvironment
+DirectionalLight3D
+Camera3D

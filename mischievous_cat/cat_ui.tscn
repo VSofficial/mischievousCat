@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5kb3r3tocpf"]
+
+[ext_resource type="Script" uid="uid://lf56fjkg8ton" path="res://control_ui.gd" id="1_lhgw5"]
+[ext_resource type="Script" uid="uid://3wdy18tlg7r8" path="res://cat_ui.gd" id="1_x838b"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_right = 0.205
+anchor_bottom = 0.188
+offset_right = -0.160019
+offset_bottom = 0.175995
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhgw5")
+
+[node name="CatUI" type="CanvasLayer" parent="."]
+script = ExtResource("1_x838b")
+
+[node name="MarginContainer" type="MarginContainer" parent="CatUI"]
+offset_right = 52.0
+offset_bottom = 54.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CatUI/MarginContainer"]
+layout_mode = 2
+
+[node name="Health" type="Label" parent="CatUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Health"
+
+[node name="ProgressBar" type="ProgressBar" parent="CatUI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40

@@ -1,0 +1,39 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ciqpofvf0nvyg"
+path.s3tc="res://.godot/imported/thecat_SHD_frip_normal.jpg-19f701264cba82b1e2d6ade1e3e02ea5.s3tc.ctex"
+path.etc2="res://.godot/imported/thecat_SHD_frip_normal.jpg-19f701264cba82b1e2d6ade1e3e02ea5.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "f122ad6db1bf19d36986cabe7610b00b"
+}
+
+[deps]
+
+source_file="res://assets/newCat/thecat_SHD_frip_normal.jpg"
+dest_files=["res://.godot/imported/thecat_SHD_frip_normal.jpg-19f701264cba82b1e2d6ade1e3e02ea5.s3tc.ctex", "res://.godot/imported/thecat_SHD_frip_normal.jpg-19f701264cba82b1e2d6ade1e3e02ea5.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/newCat/thecat_SHD_frip_normal.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://blcd4m23gkb38"]
+
+[ext_resource type="PackedScene" uid="uid://dymxpsgiibqds" path="res://assets/moreAssets/kitchen.glb" id="1_p7ujy"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_p7ujy")]
+
+[node name="group_34" parent="Sketchfab_model/Collada visual scene group/SketchUp" index="24"]
+visible = false
+
+[node name="Material2381" parent="Sketchfab_model/Collada visual scene group/SketchUp/group_34" index="1"]
+visible = false
+
+[node name="group_35" parent="Sketchfab_model/Collada visual scene group/SketchUp" index="25"]
+visible = false
+
+[node name="instance_374" parent="Sketchfab_model/Collada visual scene group/SketchUp" index="165"]
+visible = false
+
+[node name="Component_198" parent="Sketchfab_model/Collada visual scene group/SketchUp/instance_374" index="0"]
+visible = false
+
+[node name="instance_379" parent="Sketchfab_model/Collada visual scene group/SketchUp" index="166"]
+visible = false

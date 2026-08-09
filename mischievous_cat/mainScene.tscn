@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0kr1775a548w"]
+
+[ext_resource type="PackedScene" uid="uid://cbook4k8ff6xw" path="res://assets/externalScene/japanese_town.glb" id="1_iwpey"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_iwpey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0843982, 0, 1.43555)

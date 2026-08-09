@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://hc7sm88nar1w"]
+
+[ext_resource type="PackedScene" uid="uid://cbook4k8ff6xw" path="res://assets/externalScene/japanese_town.glb" id="1_0f027"]
+[ext_resource type="Script" uid="uid://dwo4dwxacesaj" path="res://camera_3d.gd" id="2_8mm7a"]
+[ext_resource type="Script" uid="uid://ca181raiq7o1o" path="res://character_body_3d.gd" id="2_d5x1h"]
+[ext_resource type="PackedScene" uid="uid://djj6ttt2vmyml" path="res://assets/newCat/thecat.glb" id="2_gyfs4"]
+[ext_resource type="Script" uid="uid://8uoda8xry86t" path="res://assets/newCat/thecat.gd" id="3_d5x1h"]
+[ext_resource type="PackedScene" uid="uid://blcd4m23gkb38" path="res://interior1.tscn" id="6_hq1ik"]
+[ext_resource type="PackedScene" uid="uid://c5kb3r3tocpf" path="res://cat_ui.tscn" id="7_nfk4m"]
+[ext_resource type="PackedScene" uid="uid://b3rlnmb76ibcn" path="res://assets/bowl2/colorful_cereal.glb" id="8_66tet"]
+[ext_resource type="Script" uid="uid://wk4mlyoxsokt" path="res://addons/virtual_joystick_plus/virtual_joystick_plus.gd" id="8_671wp"]
+[ext_resource type="Script" uid="uid://dcc8poeg4t5j2" path="res://assets/bowl2/colorful_cereal.gd" id="9_7ycvg"]
+[ext_resource type="Texture2D" uid="uid://c333cviuqsuce" path="res://addons/virtual_joystick_plus/resources/textures/joystick_texture_5.png" id="9_mo76n"]
+[ext_resource type="Texture2D" uid="uid://lec3ap6icuji" path="res://addons/virtual_joystick_plus/resources/textures/stick_texture_5.png" id="10_42l1d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d5x1h"]
+size = Vector3(42, 2, 30)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0f027"]
+
+[sub_resource type="Sky" id="Sky_2c62f"]
+sky_material = SubResource("ProceduralSkyMaterial_0f027")
+
+[sub_resource type="Environment" id="Environment_gyfs4"]
+background_mode = 2
+background_energy_multiplier = 1.5
+sky = SubResource("Sky_2c62f")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8mm7a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hq1ik"]
+
+[node name="MainScene" type="Node3D" unique_id=337584840]
+
+[node name="Sketchfab_Scene" parent="." unique_id=1012130541 instance=ExtResource("1_0f027")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene" unique_id=1448582794]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/StaticBody3D" unique_id=1054036586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30173, 0.944449, 2.14694)
+shape = SubResource("BoxShape3D_d5x1h")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=120071192]
+transform = Transform3D(1, 0, 0, 0, 0.885677, 0.464301, 0, -0.464301, 0.885677, -2.17181, 2.94016, 0.903672)
+script = ExtResource("2_8mm7a")
+cat_path = NodePath("../CharacterBody3D/CatModel")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1791289313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.0002, 35.4764)
+light_energy = 7.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2095290233]
+environment = SubResource("Environment_gyfs4")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=2001496656]
+unique_name_in_owner = true
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -1.94084, 2.23473, -0.664185)
+collision_layer = 3
+script = ExtResource("2_d5x1h")
+
+[node name="CatModel" parent="CharacterBody3D" unique_id=1122429058 instance=ExtResource("2_gyfs4")]
+transform = Transform3D(35, 0, 0, 0, 35, 0, 0, 0, 35, 1.91328, 1.08661, -0.327868)
+script = ExtResource("3_d5x1h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=112699477]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 25, 1.6693, 5.62703, 0)
+shape = SubResource("CylinderShape3D_8mm7a")
+
+[node name="Sketchfab_Scene3" parent="." unique_id=1949505489 instance=ExtResource("6_hq1ik")]
+transform = Transform3D(0.022, 0, 0, 0, 0.025, 0, 0, 0, 0.02, 15.6523, 1.97859, -6.46748)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene3" unique_id=1632385179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.3137, 65.6519)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene3/StaticBody3D" unique_id=1663524301]
+transform = Transform3D(66.5, 0, 0, 0, 25, 0, 0, 0, 45, -22.1408, -9.80599, -26.0669)
+shape = SubResource("BoxShape3D_hq1ik")
+
+[node name="Control" parent="." unique_id=418871120 instance=ExtResource("7_nfk4m")]
+
+[node name="VirtualJoystickPlus" type="Control" parent="Control" unique_id=550553836]
+custom_minimum_size = Vector2(300, 300)
+anchors_preset = 0
+offset_left = 76.0
+offset_top = 348.0
+offset_right = 376.0
+offset_bottom = 648.0
+pivot_offset = Vector2(150, 150)
+script = ExtResource("8_671wp")
+joystick_texture = ExtResource("9_mo76n")
+stick_texture = ExtResource("10_42l1d")
+metadata/_custom_type_script = "uid://wk4mlyoxsokt"
+
+[node name="foodBowl" parent="." unique_id=523684636 instance=ExtResource("8_66tet")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 14.8156, 2.72878, -5.65968)
+script = ExtResource("9_7ycvg")
